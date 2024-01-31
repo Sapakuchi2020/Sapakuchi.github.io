@@ -1,0 +1,208 @@
+body {
+    background-image: url("https://images7.alphacoders.com/978/thumb-1920-978464.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0; 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.titlecontainer {
+    background-color: rgba(255, 201, 210, 0.915);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px auto;
+    height: 80px;
+    padding-right: 10px;
+    padding-left: 74px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-family: pacifico;
+    padding: 10px;
+    margin-left: 18px;
+    margin-right: 0px;
+}
+.navbar a:hover{
+    background-color: rgba(252, 125, 186, 0.721);
+    transition: 0.5s ease-out;
+    border-radius: 10px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-container input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc; /* Added border for visibility */
+    border-radius: 5px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;   
+}
+
+#k {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+iframe{
+    margin-top: 0px;
+    z-index: 2;
+    position: relative; 
+    box-shadow: 0 0 15px 5px rgba(255, 105, 180, 0.6); 
+    transition: box-shadow 0.3s ease; 
+}
+
+iframe:hover {
+    box-shadow: 0 0 25px 10px rgba(255, 105, 180, 0.9); 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.set img, .set2 img, .set3 img, .set4 img, .set5 img, .set6 img {
+    position: absolute;
+    cursor: pointer; 
+    transition: left 0.3s cubic-bezier, top 0.3s cubic-bezier;
+    z-index: 1;
+}
+
+.set img {
+    max-width: 170px;
+    max-height: 70px;
+    animation: fall 3s linear infinite;
+    animation-delay: 0.5ms;
+}
+
+.set2 img {
+    max-width: 190px;
+    max-height: 90px;
+    left: 50%;
+    animation: fall 4s linear infinite;
+    animation-delay: 50ms;
+    transform: translateX(-50%);
+}
+
+.set3 img {
+    max-width: 310px;
+    max-height: 210px;
+    left: 50%;
+    animation: fall 8s linear infinite;
+    animation-delay: 30ms;
+    transform: translateX(-50%);
+}
+
+.set4 img {
+    max-width: 220px;
+    max-height: 120px;
+    animation: fall 5s linear infinite;
+    animation-delay: 0.5ms;
+}
+
+.set5 img {
+    max-width: 250px;
+    max-height: 150px;
+    left: 50%;
+    animation: fall 6s linear infinite;
+    animation-delay: 50ms;
+    transform: translateX(-50%);
+}
+
+.set6 img {
+    max-width: 280px;
+    max-height: 180px;
+    left: 50%;
+    animation: fall 7s linear infinite;
+    animation-delay: 30ms;
+    transform: translateX(-50%);
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+        transform: translate(20px) rotate(90deg);
+    }
+    100% {
+        top: 100%;
+        transform: translate(20px) rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titlecontainer {
+        grid-template-columns: 1fr;
+        padding-left: 7px;
+        padding-right: 7px;
+        justify-content: center;
+    }
+    #k{
+        width: 120px;
+        height: 40px;
+    }
+    .navbar a {
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    .s{
+        margin-left: 10px;
+    }
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .search-container input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-container button {
+        width: 45%;
+        margin-top: 5px;
+    }
+
+    iframe{
+        width: 501px;
+        height: 281.9px;
+    }
+
+}
+
